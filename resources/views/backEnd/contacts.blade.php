@@ -21,7 +21,7 @@
                                                     }
                                                     ?>
                                                     <li class="marginBottom5"><a
-                                                                href="{{ route('contacts') }}" {!!   ($group_id=="") ? " style='font-weight: bold;color:#0cc2aa'":""  !!}> {{ trans('backLang.allContacts') }}
+                                                                href="{{ route('contacts') }}" {!!   ($group_id=="") ? " style='font-weight: bold;color:".Helper::GeneralSiteSettings("style_color1")."'":""  !!}> {{ trans('backLang.allContacts') }}
 
                                                             <small>({{ $AllContactsCount }})</small>
 
@@ -32,7 +32,7 @@
                                                         <li class="marginBottom5"
                                                             onmouseover="document.getElementById('grpRow{{ $ContactsGroup->id }}').style.display='block'"
                                                             onmouseout="document.getElementById('grpRow{{ $ContactsGroup->id }}').style.display='none'">
-                                                            <a href="{{ route("contacts",["group_id"=>$ContactsGroup->id]) }}" {!!   ($ContactsGroup->id == $group_id) ? " style='font-weight: bold;color:#0cc2aa'":""  !!} > {!! $ContactsGroup->name !!}
+                                                            <a href="{{ route("contacts",["group_id"=>$ContactsGroup->id]) }}" {!!   ($ContactsGroup->id == $group_id) ? " style='font-weight: bold;color:".Helper::GeneralSiteSettings("style_color1")."'":""  !!} > {!! $ContactsGroup->name !!}
 
                                                                 <small>({{ count($ContactsGroup->contacts) }})</small>
 
@@ -92,14 +92,14 @@
 
 
                                                     <li class="marginBottom5"><a
-                                                                {!!   ($group_id=="wait") ? " style='font-weight: bold;color:#0cc2aa'":""  !!}
+                                                                {!!   ($group_id=="wait") ? " style='font-weight: bold;color:".Helper::GeneralSiteSettings("style_color1")."'":""  !!}
                                                                 href="{{ route("contacts",["group_id"=>"wait"]) }}"> {{ trans('backLang.waitActivation') }}
 
                                                             <small>({{ $WaitContactsCount }})</small>
 
                                                         </a></li>
                                                     <li>
-                                                        <a {!!   ($group_id=="blocked") ? " style='font-weight: bold;color:#0cc2aa'":""  !!} href="{{ route("contacts",["group_id"=>"blocked"]) }}"> {{ trans('backLang.blockedContacts') }}
+                                                        <a {!!   ($group_id=="blocked") ? " style='font-weight: bold;color:".Helper::GeneralSiteSettings("style_color1")."'":""  !!} href="{{ route("contacts",["group_id"=>"blocked"]) }}"> {{ trans('backLang.blockedContacts') }}
 
                                                             <small>( {{ $BlockedContactsCount }})</small>
 

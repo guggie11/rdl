@@ -92,7 +92,7 @@ $edt_title = "";
                                         onmouseover="document.getElementById('grpRow{{ $ParentMenu->id }}').style.display='block'"
                                         onmouseout="document.getElementById('grpRow{{ $ParentMenu->id }}').style.display='none'">
                                         <a href="{{ route("menus",["ParentMenuId"=>$ParentMenu->id]) }}"
-                                                {!!   ($ParentMenu->id == $edt_id) ? " style='font-weight: bold;color:#0cc2aa'":""  !!} >
+                                                {!!   ($ParentMenu->id == $edt_id) ? " style='font-weight: bold;color:".Helper::GeneralSiteSettings("style_color1")."'":""  !!} >
                                             {!! $title !!}
                                         </a>
 

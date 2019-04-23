@@ -3,6 +3,7 @@
 <head>
     @include('backEnd.includes.head')
     @yield('headerInclude')
+    @include('backEnd.includes.colors')
 </head>
 <body>
 
