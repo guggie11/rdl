@@ -14,4 +14,9 @@
 .b-primary {
     border-color: {{ Helper::GeneralSiteSettings("style_color1") }} !important;
 }
+
+.navbar-brand img, .navbar-brand svg {
+    max-height: 60px;
+    margin-top: 10px;
+}
 </style>
