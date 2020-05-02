@@ -37,11 +37,11 @@
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                 @endif
-                <button type="submit" class="btn primary btn-block p-x-md">{{ trans('backLang.sendPasswordResetLink') }}</button>
+                <button style='background-color:{{ Helper::GeneralSiteSettings("style_color1") }}' type="submit" class="btn primary btn-block p-x-md">{{ trans('backLang.sendPasswordResetLink') }}</button>
             </form>
         </div>
         <p id="alerts-container"></p>
-        <div class="p-v-lg text-center">{{ trans('backLang.returnTo') }} <a href="{{ url('/login') }}" class="text-primary _600">{{ trans('backLang.signIn') }}</a></div>
+        <div class="p-v-lg text-center">{{ trans('backLang.returnTo') }}, <a style='color:{{ Helper::GeneralSiteSettings("style_color1") }}!important' href="{{ url('/login') }}" class="text-primary _600">{{ trans('backLang.signIn') }}</a></div>
     </div>
 
     <!-- ############ LAYOUT END-->

@@ -54,7 +54,7 @@
                     </span>
                 @endif
 
-                <button type="submit" class="btn primary btn-block p-x-md">{{ trans('backLang.resetPassword') }}</button>
+                <button style='background-color:{{ Helper::GeneralSiteSettings("style_color1") }}' type="submit" class="btn primary btn-block p-x-md">{{ trans('backLang.resetPassword') }}</button>
             </form>
         </div>
     </div>

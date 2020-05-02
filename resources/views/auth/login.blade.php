@@ -52,7 +52,7 @@
                             class="primary"></i> {{ trans('backLang.keepMeSignedIn') }}
                     </label>
                 </div>
-                <button type="submit" class="btn primary btn-block p-x-md m-b">{{ trans('backLang.signIn') }}</button>
+                <button style='background-color: {{ Helper::GeneralSiteSettings("style_color1") }}' type="submit" class="btn primary btn-block p-x-md m-b">{{ trans('backLang.signIn') }}</button>
             </form>
             <hr/>
             @if(env("FACEBOOK_STATUS") && env("FACEBOOK_ID") && env("FACEBOOK_SECRET"))
@@ -92,7 +92,7 @@
                 </a>
             @endif
             <div class="p-v-lg text-center">
-                <div class="m-t"><a href="{{ url('/password/reset') }}"
+                <div class="m-t"><a style='color:{{ Helper::GeneralSiteSettings("style_color1") }}!important' href="{{ url('/password/reset') }}"
                                     class="text-primary _600">{{ trans('backLang.forgotPassword') }}</a></div>
             </div>
 
